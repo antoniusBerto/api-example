@@ -35,7 +35,7 @@ public class    SampleService {
     
     public boolean deleteById(Sample sample){
         for (Sample s: REPOSITORY) {
-            if (id.equals(s.getId())) {
+            if (sample.getId().equals(s.getId())) {
                 REPOSITORY.remove(id);
                 return true;
             }
