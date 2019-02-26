@@ -30,7 +30,7 @@ public class SampleController {
     }
     
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<boolean> deleteById(@RequestBody Sample sample) {
-        return ResponseEntity.ok(service.deleteById(sample));
+    public ResponseEntity<boolean> deleteById(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(service.deleteById(id));
     }
 }
