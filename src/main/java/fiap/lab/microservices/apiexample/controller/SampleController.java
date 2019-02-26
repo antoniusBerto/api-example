@@ -28,4 +28,9 @@ public class SampleController {
     public ResponseEntity<Iterable<Sample>> findAll() {
         return ResponseEntity.ok().body(service.findAll());
     }
+    
+    @RequestMapping(method = RequestMethod.DELETE)
+    public ResponseEntity<boolean> deleteById(@RequestBody Sample sample) {
+        return ResponseEntity.ok().body(service.deleteById());
+    }
 }
