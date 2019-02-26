@@ -29,7 +29,7 @@ public class SampleController {
         return ResponseEntity.ok().body(service.findAll());
     }
     
-    @RequestMapping(method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public boolean deleteById(@PathVariable("id") Integer id) {
         return service.deleteById(id);
     }
