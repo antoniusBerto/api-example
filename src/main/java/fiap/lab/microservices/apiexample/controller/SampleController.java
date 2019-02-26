@@ -31,6 +31,6 @@ public class SampleController {
     
     @RequestMapping(method = RequestMethod.DELETE)
     public ResponseEntity<boolean> deleteById(@RequestBody Sample sample) {
-        return ResponseEntity.ok().body(service.deleteById());
+        return ResponseEntity.ok().body(service.deleteById(sample));
     }
 }
