@@ -33,10 +33,10 @@ public class    SampleService {
         return null;
     }
     
-    public boolean deleteById(Sample sample){
+    public boolean deleteById(Integer id){
         for (Sample s: REPOSITORY) {
-            if (sample.getId().equals(s.getId())) {
-                REPOSITORY.remove(sample.getId());
+            if (id.equals(s.getId())) {
+                REPOSITORY.remove(id);
                 return true;
             }
         }
