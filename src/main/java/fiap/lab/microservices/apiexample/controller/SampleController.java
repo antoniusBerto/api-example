@@ -7,7 +7,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
+@CrossOrigin( origins = "*" )
 @RequestMapping(value = "/api/samples", produces = MediaType.APPLICATION_JSON_VALUE)
 public class SampleController {
 
